@@ -1,0 +1,2 @@
+class PistsController < ApplicationController
+end
