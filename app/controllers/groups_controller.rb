@@ -60,7 +60,7 @@ end
 def quit
   @group = Group.find(params[:id])
 
-  if cueeren_user.is_member_of?(@group)
+  if current_user.is_member_of?(@group)
     current_user.quit!(@group)
     flash[:alert] = "已退出本讨论版！"
   else
